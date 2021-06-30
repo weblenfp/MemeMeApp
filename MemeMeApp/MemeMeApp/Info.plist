@@ -57,8 +57,8 @@
 	</array>
 	<key>NSCameraUsageDescription</key>
 	<string>Need to capture photos</string>
-	<key>NSAppleMusicUsageDescription</key>
-	<string>Need to capture photos</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Need to save images</string>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>

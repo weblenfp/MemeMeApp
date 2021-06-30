@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -45,24 +45,27 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="TOP" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9LA-4I-yof" userLabel="textFieldTop">
-                                <rect key="frame" x="0.0" y="144" width="414" height="49.5"/>
+                                <rect key="frame" x="0.0" y="144" width="414" height="49.666666666666657"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="BOTTOM" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q1s-ox-scA" userLabel="textFieldBottom">
-                                <rect key="frame" x="0.0" y="712.5" width="414" height="49.5"/>
+                                <rect key="frame" x="0.0" y="712.66666666666663" width="414" height="49.333333333333371"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HxO-h5-gWL">
-                                <rect key="frame" x="20" y="44" width="48" height="30"/>
-                                <state key="normal" title="Cancel"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1P4-gY-TTm">
-                                <rect key="frame" x="354" y="44" width="34" height="30"/>
-                                <state key="normal" title="Save"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HxO-h5-gWL" userLabel="Share Button">
+                                <rect key="frame" x="20" y="54" width="19" height="23"/>
+                                <state key="normal" image="square.and.arrow.up" catalog="system"/>
                                 <connections>
-                                    <action selector="save" destination="BYZ-38-t0r" eventType="touchDown" id="XMh-ig-2Re"/>
+                                    <action selector="shareMemedImage" destination="BYZ-38-t0r" eventType="touchDown" id="baB-XY-Jjd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1P4-gY-TTm" userLabel="Cancel Button">
+                                <rect key="frame" x="340" y="54" width="48" height="30"/>
+                                <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <action selector="cancelOperation" destination="BYZ-38-t0r" eventType="touchDown" id="UA4-Iz-hcl"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -77,10 +80,10 @@
                             <constraint firstItem="JZI-qC-PYZ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="50" id="Cwo-yM-iUn"/>
                             <constraint firstItem="1P4-gY-TTm" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="HxO-h5-gWL" secondAttribute="trailing" constant="8" symbolic="YES" id="Dni-Ku-Hlz"/>
                             <constraint firstItem="Q1s-ox-scA" firstAttribute="bottom" secondItem="JZI-qC-PYZ" secondAttribute="bottom" constant="-50" id="Idw-6k-ZHm"/>
-                            <constraint firstItem="HxO-h5-gWL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="OdO-bE-qFz"/>
+                            <constraint firstItem="HxO-h5-gWL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="OdO-bE-qFz"/>
                             <constraint firstAttribute="bottom" secondItem="sYl-LC-8Nf" secondAttribute="bottom" id="OxO-hz-hpm"/>
                             <constraint firstItem="sYl-LC-8Nf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="-44" id="Pcc-vU-lIh"/>
-                            <constraint firstItem="1P4-gY-TTm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="QIj-OI-pX5"/>
+                            <constraint firstItem="1P4-gY-TTm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="QIj-OI-pX5"/>
                             <constraint firstItem="JZI-qC-PYZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Umb-Kv-FDQ"/>
                             <constraint firstItem="sYl-LC-8Nf" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="44" id="WQA-RR-a2M"/>
                             <constraint firstItem="gAg-xb-DGI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="YRz-Fn-aVV"/>
@@ -97,10 +100,10 @@
                     </view>
                     <connections>
                         <outlet property="cameraButton" destination="DgB-oe-0Nv" id="G92-kh-VDX"/>
-                        <outlet property="cancelButton" destination="HxO-h5-gWL" id="py5-cS-q35"/>
+                        <outlet property="cancelButton" destination="1P4-gY-TTm" id="JHO-c3-e8N"/>
                         <outlet property="imagePickerView" destination="JZI-qC-PYZ" id="p5M-Ge-SsY"/>
                         <outlet property="navigationBar" destination="gAg-xb-DGI" id="MzS-LN-HEi"/>
-                        <outlet property="saveButton" destination="1P4-gY-TTm" id="xPA-mj-GvE"/>
+                        <outlet property="shareButton" destination="HxO-h5-gWL" id="w6s-F3-v56"/>
                         <outlet property="textFieldBottom" destination="Q1s-ox-scA" id="hk9-gm-UFb"/>
                         <outlet property="textFieldTop" destination="9LA-4I-yof" id="rFO-EC-hSR"/>
                         <outlet property="toolbar" destination="sYl-LC-8Nf" id="N3A-gN-vUF"/>
@@ -114,6 +117,7 @@
     <resources>
         <image name="camera.fill" catalog="system" width="128" height="94"/>
         <image name="mycar" width="820" height="824"/>
+        <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
