@@ -14,6 +14,7 @@
 		1626F6B1268552A9008DAD8A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1626F6B0268552A9008DAD8A /* Assets.xcassets */; };
 		1626F6B4268552A9008DAD8A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1626F6B2268552A9008DAD8A /* LaunchScreen.storyboard */; };
 		1626F6BC268D5D9C008DAD8A /* MemeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1626F6BB268D5D9C008DAD8A /* MemeModel.swift */; };
+		1626F6C3268D81AB008DAD8A /* Impact.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1626F6C2268D81AB008DAD8A /* Impact.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		1626F6B3268552A9008DAD8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1626F6B5268552A9008DAD8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1626F6BB268D5D9C008DAD8A /* MemeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeModel.swift; sourceTree = "<group>"; };
+		1626F6C2268D81AB008DAD8A /* Impact.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Impact.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				1626F6BB268D5D9C008DAD8A /* MemeModel.swift */,
 				1626F6AB268552A6008DAD8A /* MemeCreatorViewController.swift */,
 				1626F6AD268552A6008DAD8A /* Main.storyboard */,
+				1626F6C2268D81AB008DAD8A /* Impact.ttf */,
 				1626F6B0268552A9008DAD8A /* Assets.xcassets */,
 				1626F6B2268552A9008DAD8A /* LaunchScreen.storyboard */,
 				1626F6B5268552A9008DAD8A /* Info.plist */,
@@ -127,6 +130,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1626F6C3268D81AB008DAD8A /* Impact.ttf in Resources */,
 				1626F6B4268552A9008DAD8A /* LaunchScreen.storyboard in Resources */,
 				1626F6B1268552A9008DAD8A /* Assets.xcassets in Resources */,
 				1626F6AF268552A6008DAD8A /* Main.storyboard in Resources */,
