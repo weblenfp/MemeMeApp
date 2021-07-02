@@ -27,12 +27,10 @@ class MemeCreatorViewController: UIViewController, UIImagePickerControllerDelega
     
     var activeField: UITextField?
     var memedImage: UIImage!
-    let pickerController = UIImagePickerController()
     let text_field_top = "TOP", text_field_bottom = "BOTTOM", text_app_name = "Create a Meme"
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        pickerController.delegate = self
         textFieldTop.delegate = self
         textFieldBottom.delegate = self
         configButtonsState(isButtonsEnabled: false)
@@ -128,6 +126,8 @@ class MemeCreatorViewController: UIViewController, UIImagePickerControllerDelega
     }
     
     func pickImage(sourceType: UIImagePickerController.SourceType) {
+        let pickerController = UIImagePickerController()
+        pickerController.delegate = self
         pickerController.sourceType = sourceType
         present(pickerController, animated: true, completion: nil)
     }
