@@ -18,6 +18,11 @@ class MemeCreatorViewController: UIViewController, UIImagePickerControllerDelega
     @IBOutlet weak var shareButton: UIBarButtonItem!
     @IBOutlet weak var cancelButton: UIBarButtonItem!
     
+    var memes: [Meme]! {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        return appDelegate.memes
+    }
+    
     var memeTextAttributes: [NSAttributedString.Key: Any] = [
         NSAttributedString.Key.strokeColor: UIColor.black,
         NSAttributedString.Key.foregroundColor: UIColor.white,
@@ -41,6 +46,7 @@ class MemeCreatorViewController: UIViewController, UIImagePickerControllerDelega
     }
     
     @IBAction func shareMemedImage() {
+        dismissCursor()
         memedImage = generateMemedImage()
         let controller = UIActivityViewController(activityItems: [memedImage!], applicationActivities: nil)
         present(controller, animated: true, completion: nil)
@@ -64,7 +70,8 @@ class MemeCreatorViewController: UIViewController, UIImagePickerControllerDelega
     }
     
     func save() {
-        _ = Meme(topText: textFieldTop.text!, bottomText: textFieldBottom.text!, originalImage: imagePickerView.image!, memedImage: memedImage!)
+        let meme = Meme(topText: textFieldTop.text!, bottomText: textFieldBottom.text!, originalImage: imagePickerView.image!, memedImage: memedImage!)
+        (UIApplication.shared.delegate as! AppDelegate).memes.append(meme)
     }
     
     func generateMemedImage() -> UIImage {
@@ -118,11 +125,17 @@ class MemeCreatorViewController: UIViewController, UIImagePickerControllerDelega
     }
     
     @IBAction func pickAnImageFromAlbum(_ sender: Any) {
+        dismissCursor()
         pickImage(sourceType: .photoLibrary)
     }
     
     @IBAction func pickAnImageFromCamera(_ sender: Any) {
+        dismissCursor()
         pickImage(sourceType: .camera)
+    }
+    
+    private func dismissCursor() {
+        UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
     }
     
     func pickImage(sourceType: UIImagePickerController.SourceType) {
@@ -175,7 +188,7 @@ class MemeCreatorViewController: UIViewController, UIImagePickerControllerDelega
     
     func textFieldDidEndEditing(_ textField: UITextField) {
         if textField.text?.trimmingCharacters(in: .whitespaces).compare("") == .orderedSame {
-            textField.text = textField == textFieldTop ? text_field_top : text_field_bottom
+            textField.text = textField.isEqual(textFieldTop) ? text_field_top : text_field_bottom
         }
         activeField = nil
     }
