@@ -110,7 +110,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="mycar" translatesAutoresizingMaskIntoConstraints="NO" id="UGh-8S-OpH" userLabel="imageView">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="UGh-8S-OpH" userLabel="imageView">
                                 <rect key="frame" x="0.0" y="89" width="414" height="718"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
@@ -118,11 +118,10 @@
                         <viewLayoutGuide key="safeArea" id="XxB-Wa-Rby"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="UGh-8S-OpH" firstAttribute="centerY" secondItem="4QJ-e7-ebH" secondAttribute="centerY" id="8XA-XG-8TU"/>
-                            <constraint firstItem="UGh-8S-OpH" firstAttribute="trailing" secondItem="XxB-Wa-Rby" secondAttribute="trailing" id="Dew-HI-Guq"/>
-                            <constraint firstItem="UGh-8S-OpH" firstAttribute="top" secondItem="XxB-Wa-Rby" secondAttribute="top" constant="45" id="Mwc-rl-WK3"/>
-                            <constraint firstItem="UGh-8S-OpH" firstAttribute="leading" secondItem="XxB-Wa-Rby" secondAttribute="leading" id="VNY-i2-oUl"/>
-                            <constraint firstItem="UGh-8S-OpH" firstAttribute="centerX" secondItem="4QJ-e7-ebH" secondAttribute="centerX" id="bZg-cI-lWy"/>
+                            <constraint firstItem="UGh-8S-OpH" firstAttribute="centerY" secondItem="4QJ-e7-ebH" secondAttribute="centerY" id="7uc-Wc-A0h"/>
+                            <constraint firstItem="UGh-8S-OpH" firstAttribute="top" secondItem="XxB-Wa-Rby" secondAttribute="top" constant="45" id="RAM-4Q-Ojh"/>
+                            <constraint firstItem="UGh-8S-OpH" firstAttribute="leading" secondItem="4QJ-e7-ebH" secondAttribute="leading" id="gI8-ys-Ggb"/>
+                            <constraint firstAttribute="trailing" secondItem="UGh-8S-OpH" secondAttribute="trailing" id="ne9-oq-kz3"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="WDl-GN-yVv"/>
@@ -142,31 +141,35 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="x05-OQ-N1E">
-                            <size key="itemSize" width="191" height="185"/>
+                            <size key="itemSize" width="190" height="202"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MemeCollectionViewCell" id="dbN-aF-hvK" customClass="MemeCollectionViewCell" customModule="MemeMeApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="200" height="153"/>
+                                <rect key="frame" x="0.0" y="0.0" width="190" height="202"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="200" height="153"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="190" height="202"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xhZ-b4-DUK">
-                                            <rect key="frame" x="10" y="10" width="180" height="133"/>
+                                            <rect key="frame" x="18" y="20" width="154" height="162"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="162" id="FEx-Iy-60b"/>
+                                                <constraint firstAttribute="width" constant="161" id="LHY-fH-TG9"/>
+                                            </constraints>
                                         </imageView>
                                     </subviews>
                                 </view>
                                 <constraints>
-                                    <constraint firstItem="xhZ-b4-DUK" firstAttribute="top" secondItem="dbN-aF-hvK" secondAttribute="topMargin" constant="2" id="3b5-lT-660"/>
-                                    <constraint firstAttribute="trailingMargin" secondItem="xhZ-b4-DUK" secondAttribute="trailing" constant="2" id="aFK-5T-doP"/>
-                                    <constraint firstAttribute="bottomMargin" secondItem="xhZ-b4-DUK" secondAttribute="bottom" constant="2" id="bYa-NU-SWv"/>
-                                    <constraint firstItem="xhZ-b4-DUK" firstAttribute="leading" secondItem="dbN-aF-hvK" secondAttribute="leadingMargin" constant="2" id="u8T-q4-aEY"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="xhZ-b4-DUK" secondAttribute="bottom" constant="12" id="ACa-D8-nhD"/>
+                                    <constraint firstItem="xhZ-b4-DUK" firstAttribute="top" secondItem="dbN-aF-hvK" secondAttribute="topMargin" constant="12" id="EFm-lM-mBJ"/>
+                                    <constraint firstItem="xhZ-b4-DUK" firstAttribute="leading" secondItem="dbN-aF-hvK" secondAttribute="leadingMargin" constant="10" id="Nu8-4k-xWx"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="xhZ-b4-DUK" secondAttribute="trailing" constant="10" id="Ytj-6q-1T9"/>
                                 </constraints>
-                                <size key="customSize" width="200" height="153"/>
+                                <size key="customSize" width="190" height="202"/>
                                 <connections>
                                     <outlet property="memeImageView" destination="xhZ-b4-DUK" id="eEi-Jl-xe5"/>
                                 </connections>
@@ -194,7 +197,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JIb-H0-GsM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1297.1014492753625" y="154.6875"/>
+            <point key="canvasLocation" x="-1298.5507246376812" y="153.34821428571428"/>
         </scene>
         <!--Meme Creator View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -226,7 +229,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sYl-LC-8Nf">
-                                <rect key="frame" x="0.0" y="720" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="715" width="414" height="49"/>
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="NZ9-8o-wkf"/>
                                     <barButtonItem title="Take a picture" image="camera.fill" catalog="system" id="DgB-oe-0Nv">
@@ -315,7 +318,6 @@
     </inferredMetricsTieBreakers>
     <resources>
         <image name="camera.fill" catalog="system" width="128" height="94"/>
-        <image name="mycar" width="820" height="824"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
         <systemColor name="systemBackgroundColor">
