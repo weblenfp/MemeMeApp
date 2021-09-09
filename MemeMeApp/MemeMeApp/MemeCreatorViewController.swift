@@ -53,6 +53,7 @@ class MemeCreatorViewController: UIViewController, UIImagePickerControllerDelega
         controller.completionWithItemsHandler = { activity, completed, items, error in
             if completed {
                 self.save()
+                self.navigationController?.popToRootViewController(animated: true)
                 return
             }
         }
